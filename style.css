@@ -6,9 +6,13 @@
     box-sizing: inherit;
     font-family: 'Press Start 2P', sans-serif;
     font-size: large;
-    background-color: black;
     color:aliceblue;
   }
+
+  body {
+    background-color: black; /* Move it here */
+}
+
 div.above-horizon{
     position: relative;
     height: 40vh;
@@ -61,8 +65,12 @@ button.restart {
     color: black;
     font-size: 1.5rem;
     margin-bottom: 5rem;
+    cursor: pointer;
 }
-
+button.restart:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
 div.below-horizon {
     display: flex;
     margin-top: 5rem;
@@ -81,12 +89,19 @@ input.guess {
     border: 4px solid #eee;
     text-align: center;
     justify-content: center;
+    color: black;
     margin-bottom: 2rem;
 }
 button.check{
+    cursor: pointer;
     padding: 2rem;
     background-color: aliceblue;
     color: black;
+}
+
+button.check:active{
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 div.left-section {
     margin-top: 5%;
